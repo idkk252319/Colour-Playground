@@ -27,10 +27,29 @@ function changeBgColour() {
     bodyHTML.style.backgroundColor = buttonNow.textContent
     currentHTML.textContent = buttonNow.textContent
     i = (i + 1) % buttonsHTML.length
+
+    stopbtnHTML.addEventListener('mouseover', () => {
+        stopbtnHTML.style.backgroundColor = buttonNow.textContent
+        stopbtnHTML.style.color = "White"
+})
 }
 
 stopbtnHTML.addEventListener('click', () => {
     clearInterval(interval)
     bodyHTML.style.backgroundColor = 'white'
     currentHTML.textContent = 'White'
+})
+
+startbtnHTML.addEventListener('mouseover', () => {
+    startbtnHTML.style.backgroundColor = "#b04d4d"
+})
+
+startbtnHTML.addEventListener('mouseout', () => {
+    startbtnHTML.style.fontFamily = "monospace"
+})
+
+
+
+stopbtnHTML.addEventListener('mouseout', () => {
+    stopbtnHTML.style.fontFamily = "monospace"
 })
